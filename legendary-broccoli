@@ -1,0 +1,17 @@
+        var newCollage = collage
+        
+        newCollage.texts[textIndex] = textReducer.reduce(
+            newCollage.texts[textIndex],
+            action
+        )
+        
+        return newCollage
+    }
+        var newState = state
+        switch state.editMode {
+        case .preview:
+            newState.collage = elementsTransformer.scale(
+                gestureState,
+                in: state.collage
+            )
+            
